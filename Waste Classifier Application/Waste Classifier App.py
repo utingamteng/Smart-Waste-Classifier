@@ -36,7 +36,10 @@ if not os.path.exists(MODEL_PATH):
     link = "https://drive.google.com/uc?id=1KkJEdh12Mi6jYz0rlb_47GDqgFKwcplu"
     gdown.download(link, MODEL_PATH, quiet=False)
 
-st.image("assets/App_Icon.png", width=240)
+BASE_DIR = os.path.dirname(__file__)
+image_path = os.path.join(BASE_DIR, "assets", "App_Icon.png")
+
+st.image(image_path, width=240)
 
 # st.title(":green[Trash]:grey[Net]")
 st.markdown("### **:blue[Smart] :green[Trash] Classifier!**")
@@ -69,6 +72,7 @@ if uploaded:
             else :
 
                 st.write(f"The AI was :red[{(confidence*100):.2f}%] sure!")
+
 
 
 
