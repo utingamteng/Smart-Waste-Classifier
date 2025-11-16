@@ -1,3 +1,5 @@
+# Note : The Dockerfile must be placed inside the Waste Classifier Application in order to run smoothly when performing Build-Run
+
 FROM python:3.10
 
 WORKDIR /Waste Classifier App
