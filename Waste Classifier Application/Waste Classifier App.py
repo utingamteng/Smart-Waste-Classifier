@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import gdown
 from PIL import Image
 from ImageLoader import ImageClassifier
 
@@ -68,5 +69,6 @@ if uploaded:
             else :
 
                 st.write(f"The AI was :red[{(confidence*100):.2f}%] sure!")
+
 
 
