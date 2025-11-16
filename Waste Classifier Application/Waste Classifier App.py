@@ -28,6 +28,9 @@ SentenceBank = ['But... i wouldn\'t bet even a single penny on that!',
                 'Definitely yes! No doubt!']
 
 MODEL_PATH = "Model Weight/Best ConvNeXt.pt"
+if not os.path.exists(MODEL_PATH):
+    url = "https://drive.google.com/file/d/1KkJEdh12Mi6jYz0rlb_47GDqgFKwcplu/view?usp=sharing"
+    gdown.download(url, model_path, quiet=False)
 
 st.image("assets/App Icon.png", width=240)
 
@@ -60,4 +63,5 @@ if uploaded:
             elif confidence <= 0.5 and confidence >= 0.25 :
                 st.write(f"The AI was :orange[{(confidence*100):.2f}%] sure!")
             else :
+
                 st.write(f"The AI was :red[{(confidence*100):.2f}%] sure!")
