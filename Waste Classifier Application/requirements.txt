@@ -1,6 +1,6 @@
 streamlit
+gdown
 torch
 torchvision
 Pillow
 numpy
-gdown
